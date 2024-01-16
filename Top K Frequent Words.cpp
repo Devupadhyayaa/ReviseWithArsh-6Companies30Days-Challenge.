@@ -29,13 +29,11 @@ public:
                 }
             }
         }
-        vector<pair<string,int>>ans;
+        vector<string>soln;
         while(!pq.empty()){
-            ans.push_back({pq.top().first,pq.top().second});
+            soln.push_back(pq.top().first);
             pq.pop();
         }
-        vector<string>soln;
-        for(auto it:ans)soln.push_back(it.first);
         reverse(soln.begin(),soln.end());
         return soln;
     }
